@@ -6,5 +6,6 @@ router.get('/profile', (req, res) => Promise.resolve(decoratePublic(req.user)).t
 router.use('/account', require('./userManagement'))
 router.use('/content', require('./siteContent').router)
 router.use('/sponsor', require('./sponsor').router)
+router.use('/enroll', require('./enroll').router)
 
 module.exports = router
